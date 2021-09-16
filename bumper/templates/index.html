@@ -19,14 +19,14 @@ Inicio
     </div>
     <div class="spacer rower-bg"></div>
     <div class="content">
+    <h2>Novedades</h2>
+{#        hacer un for loop y que por cada item de coloque en el index#}
         <div class="item-container">
-{#    todo: create the item description#}
-
-    {{ last_bike.name }}
-        {{ last_bike.description }}
-        {{ last_bike.price }}
-        <p>last bike</p>
-        <img src="media/{{ last_bike_picture.image }}">
+            <div class="title-detail">{{ last_bike.name }}</div>
+            <div class="description-detail">{{ last_bike.description }}</div>
+            <div class="price-detail">${{ last_bike.price }}</div>
+            <img class="image-detail" src="media/{{ last_bike_picture.image }}" alt="{{ last_bike_picture.product.name }}">
+            <button class="button-detail">Comprar</button>
         </div>
     </div>
     <div class="spacer bike-bg">NO EXCUSES, JUST IMPROVE</div>

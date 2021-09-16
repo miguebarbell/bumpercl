@@ -2,13 +2,20 @@
     height: 30vh;
 }
 .contact {
-    background: url(../static/images/contact.png) center bottom;
+    background: url(../static/images/contact.png) center top;
     background-size: cover;
 }
 .content {
+    display: flex;
+    flex-direction: column;
+    /*display: grid;*/
     min-height: 30vh;
     background-color: black;
     color: white;
+    padding: 3rem;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 .rower-bg {
     background: url(../static/images/rower-pedals.jpg) fixed center;
@@ -62,11 +69,79 @@
     background: transparent;
     border-radius: 10px;
     width: 5rem;
+    margin-top: 2rem;
 }
 .inner-notice-container > p {
     height: 80%;
 }
+
 /*Item styling*/
 .item-container {
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 'title title picture' 'description description picture' 'price button picture';
+    padding: 3rem;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    max-width: 80vw;
+}
+.image-detail {
+    display: block;
+    align-items: center;
+    justify-items: center;
+    grid-area: picture;
+    /*width: 20rem;*/
+    /*width: 40vw;*/
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.price-detail {
+    grid-area: price;
+    text-align: start;
 
+}
+.description-detail {
+    grid-area: description;
+}
+.button-detail {
+    font-weight: bold;
+    grid-area: button;
+    align-items: center;
+    height: 2rem;
+    width: 4rem;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid green;
+}
+.title-detail {
+    font-weight: bold;
+    grid-area: title;
+}
+.button-detail:hover {
+    color: white;
+    background-color: green;
+}
+@media screen and (min-width: 590px) {
+    .item-container {
+        grid-template-columns: 15vw 15vw 40vw;
+        grid-template-areas: 'title title picture' 'description description picture' 'price button picture';
+        grid-template-rows: auto auto auto;
+    }
+}
+@media screen and (max-width: 590px) {
+    .item-container {
+        grid-template-columns: 40vw 30vw ;
+        grid-template-areas: 'title title ' 'description description ' 'price button ' 'picture picture';
+        grid-template-rows: auto auto;
+    }
+}
+@media screen and (max-width: 457px) {
+    .item-container {
+        grid-template-columns: 70vw ;
+        grid-template-areas: 'title' 'description' 'picture' 'price' 'button';
+        grid-template-rows: auto;
+    }
 }
