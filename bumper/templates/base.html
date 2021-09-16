@@ -4,12 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} - Bumper Chile {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="static/base.css">
 {%  block styles %}
 {% endblock %}
 {% block script %}
 {% endblock %}
 </head>
 <body>
+<nav>
+    <div class="logo-bumper"></div>
+    <div class="menu">
+    <div class="nav-button">Bikes</div>
+    <div class="nav-button">Rowers</div>
+    <div class="nav-button">Barbells</div>
+    <div class="nav-button">Bumpers</div>
+    </div>
+    <div class="cart nav-button">CART</div>
+</nav>
 {% block body %}
 {% endblock %}
 </body>

@@ -1,8 +1,6 @@
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser
 from django.db import models
-# from server.models import User
-
 
 # Create your models here.
 class UserManager(BaseUserManager):
@@ -32,13 +30,16 @@ class UserManager(BaseUserManager):
 class Product(models.Model):
     # name, price, description, date, available,
     name = models.CharField(max_length=100, unique=True)
-    description = models.CharField(max_length=1000)
+    description = models.TextField(max_length=1000)
     stock = models.IntegerField()
     price = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
     available = models.BooleanField(default=False)
     CATEGORY_CHOICES = [('BIKE', 'Bikes'), ('GENERAL', 'General Fitness')]
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='GENERAL')
+
+    def __str__(self):
+        return self.name
 
 
 class User(AbstractBaseUser):
@@ -73,3 +74,15 @@ class Order(models.Model):
     products = models.ManyToManyField(Product)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     date = models.DateTimeField(auto_now_add=True)
+    price = models.IntegerField()
+
+    def __str__(self):
+        return self.id
+
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to=f'media/${product}/')
+
+    def __str__(self):
+        return self.image
