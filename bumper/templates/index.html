@@ -9,9 +9,28 @@ Inicio
 {% block script %}
 {% endblock %}
 {% block body %}
+
+    <div id="notice-container">
+    <div class="inner-notice-container">
+        <h2 id="notice-title"></h2>
+        <p id="notice-content"></p>
+    <button type="button" class="notice-close">Cerrar</button>
+    </div>
+    </div>
     <div class="spacer rower-bg"></div>
-    <div class="content">Rowers</div>
+    <div class="content">
+        <div class="item-container">
+{#    todo: create the item description#}
+
+    {{ last_bike.name }}
+        {{ last_bike.description }}
+        {{ last_bike.price }}
+        <p>last bike</p>
+        <img src="media/{{ last_bike_picture.image }}">
+        </div>
+    </div>
     <div class="spacer bike-bg">NO EXCUSES, JUST IMPROVE</div>
     <div class="content">Barbels</div>
     <div class="content contact">Contact</div>
+    <script src="../static/main.js"></script>
 {% endblock %}

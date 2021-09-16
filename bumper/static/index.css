@@ -8,6 +8,7 @@
 .content {
     min-height: 30vh;
     background-color: black;
+    color: white;
 }
 .rower-bg {
     background: url(../static/images/rower-pedals.jpg) fixed center;
@@ -22,6 +23,50 @@
     font-size: 3rem;
     font-weight: bold;
     color: white;
+}
 
-    /*margin-left: 30rem;*/
+/*notice styling*/
+#notice-container {
+    /*display: flex;*/
+    display: none;
+    background: transparent;
+    min-height: 100%;
+    min-width: 100%;
+    /*position: absolute;*/
+    z-index: 999;
+    /*font-size: 7rem;*/
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+.inner-notice-container {
+    background: white;
+    min-height: 10vh;
+    min-width: 10vw;
+    max-width: 50vw;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+.notice-close{
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border-radius: 10px;
+    width: 5rem;
+}
+.inner-notice-container > p {
+    height: 80%;
+}
+/*Item styling*/
+.item-container {
+
 }

@@ -2,6 +2,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser
 from django.db import models
 
+
 # Create your models here.
 class UserManager(BaseUserManager):
     def create_user(self, email, username, password=None):
@@ -35,7 +36,11 @@ class Product(models.Model):
     price = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
     available = models.BooleanField(default=False)
-    CATEGORY_CHOICES = [('BIKE', 'Bikes'), ('GENERAL', 'General Fitness')]
+    CATEGORY_CHOICES = [('BIKE', 'Bikes'),
+                        ('ROWER', 'Rowers'),
+                        ('GENERAL', 'General Fitness'),
+                        ('BARBELL', 'Barbells'),
+                        ('BUMPER', 'Bumpers')]
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='GENERAL')
 
     def __str__(self):
@@ -74,7 +79,7 @@ class Order(models.Model):
     products = models.ManyToManyField(Product)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     date = models.DateTimeField(auto_now_add=True)
-    price = models.IntegerField()
+    price = models.IntegerField(default=0)
 
     def __str__(self):
         return self.id
@@ -82,7 +87,11 @@ class Order(models.Model):
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to=f'media/${product}/')
+    image = models.ImageField(upload_to=f'%Y/')
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.image
+        return self.product.name
+
+    # def image_path(self):
+    #     self.
