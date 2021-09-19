@@ -1,1 +1,1 @@
-web: gunicorn bumpercl.wsgi
+web: gunicorn bumpercl.wsgi --log-file -
