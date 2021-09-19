@@ -5,4 +5,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='indexbumper'),
+    path('categoria/<str:category>', views.categories, name='categoriesbumper'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

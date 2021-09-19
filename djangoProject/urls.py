@@ -16,7 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
+admin.site.site_header = 'Admin Panel'
+admin.site.site_title = 'Bumper Chile'
+
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('grappelli/', include('grappelli.urls')),  # grappelli URLS
+    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
+    path('ecos/', admin.site.urls),
     path('', include('bumper.urls')),
 ]

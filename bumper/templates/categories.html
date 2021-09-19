@@ -1,11 +1,27 @@
 {% extends 'base.html' %}
 {%  load static %}
 {% block title %}
-Categorias
+    {{ category }}
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="/static/item.css">
+    <link rel="stylesheet" type="text/css" href="/static/categories.css">
 {% endblock %}
 {% block script %}
 {% endblock %}
 {% block body %}
-Funcionando
-
+    <div class="bikes-container">
+    {% for element, pictures in elements %}
+        <div class="item-container">
+            <div class="title-detail">{{ element.name }}</div>
+            <div class="description-detail">{{ element.description }}</div>
+            <div class="price-detail">${{ element.price }}</div>
+            {% for picture in pictures %}
+                <img class="image-detail" src="/media/{{ picture.image }}" alt="{{ picture.product.name }}">
+            {% endfor %}
+            <button class="button-detail">Comprar</button>
+        </div>
+    {% endfor %}
+    </div>
 {% endblock %}

@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} - Bumper Chile {% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="static/base.css">
+    <title>{% block title %}{% endblock %} - Bumper Chile</title>
+    <link rel="stylesheet" type="text/css" href="/static/base.css">
 {%  block styles %}
 {% endblock %}
 {% block script %}
@@ -12,12 +12,11 @@
 </head>
 <body>
 <nav>
-    <div class="logo-bumper"></div>
+    <a href="{% url 'indexbumper' %}"><div class="logo-bumper"></div></a>
     <div class="menu">
-    <div class="nav-button">Bikes</div>
-    <div class="nav-button">Rowers</div>
-    <div class="nav-button">Barbells</div>
-    <div class="nav-button">Bumpers</div>
+        <div class="nav-button"><a href="/categoria/BIKE">Bikes</a></div>
+        <div class="nav-button"><a href="/categoria/ROWER">Rowers</a></div>
+       <div class="nav-button"><a href="/categoria/TREADMILL">Treadmill</a></div>
     </div>
     <div class="cart nav-button">CART</div>
 </nav>

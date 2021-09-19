@@ -3,6 +3,9 @@
 }
 body {
     /*width: 90vw;*/
+    background-color: black;
+    min-height: 100vh;
+    min-weight: 100vw;
 }
 nav {
     display: flex;
@@ -15,6 +18,9 @@ nav {
     text-transform: uppercase;
     flex-wrap: wrap;
     position: fixed;
+}
+a {
+    text-decoration: none;
 }
 .nav-button {
     color: white;

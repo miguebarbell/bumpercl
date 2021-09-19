@@ -5,6 +5,7 @@ Inicio
 {% endblock %}
 {% block styles %}
     <link rel="stylesheet" type="text/css" href="/static/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/item.css">
 {% endblock %}
 {% block script %}
 {% endblock %}
@@ -20,12 +21,12 @@ Inicio
     <div class="spacer rower-bg"></div>
     <div class="content">
     <h2>Novedades</h2>
-{#        hacer un for loop y que por cada item de coloque en el index#}
+{#       todo: hacer un for loop y que por cada item de coloque en el index#}
         <div class="item-container">
             <div class="title-detail">{{ last_bike.name }}</div>
             <div class="description-detail">{{ last_bike.description }}</div>
             <div class="price-detail">${{ last_bike.price }}</div>
-            <img class="image-detail" src="media/{{ last_bike_picture.image }}" alt="{{ last_bike_picture.product.name }}">
+            <img class="image-detail" src="/media/{{ last_bike_picture.image }}" alt="{{ last_bike_picture.product.name }}">
             <button class="button-detail">Comprar</button>
         </div>
     </div>
