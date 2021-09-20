@@ -14,7 +14,8 @@ nav {
     width: 100vw;
     height: 3rem;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Stencil Std, fantasy;
+    /*font-size: 2rem;*/
     text-transform: uppercase;
     flex-wrap: wrap;
     position: fixed;
@@ -58,13 +59,13 @@ a {
 }
 @media screen and (max-width: 590px) {
     nav {
-        height: 6rem;
+        height: 3rem;
         background-color: black;
     }
 }
 @media screen and (max-width: 457px) {
     nav {
-        height: 6rem;
+        height: 3rem;
         background-color: rgba(0, 0, 0, .7);
     }
     .nav-button {
