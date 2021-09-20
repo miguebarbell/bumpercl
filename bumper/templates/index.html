@@ -23,10 +23,10 @@ Inicio
     <h2>Novedades</h2>
 {#       todo: hacer un for loop y que por cada item de coloque en el index#}
         <div class="item-container">
-            <div class="title-detail">{{ last_bike.name }}</div>
-            <div class="description-detail">{{ last_bike.description }}</div>
-            <div class="price-detail">${{ last_bike.price }}</div>
-            <img class="image-detail" src="/media/{{ last_bike_picture.image }}" alt="{{ last_bike_picture.product.name }}">
+            <div class="title-detail">{{ last.name }}</div>
+            <div class="description-detail">{{ last.description }}</div>
+            <div class="price-detail">${{ last.price }}</div>
+            <img class="image-detail" src="/media/{{ last_picture.image }}" alt="{{ last_picture.product.name }}">
             <button class="button-detail">Comprar</button>
         </div>
     </div>

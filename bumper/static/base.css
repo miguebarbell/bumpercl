@@ -5,7 +5,7 @@ body {
     /*width: 90vw;*/
     background-color: black;
     min-height: 100vh;
-    min-weight: 100vw;
+    min-width: 100vw;
 }
 nav {
     display: flex;
@@ -27,11 +27,11 @@ a {
     padding: 0.5rem 1rem;
     /*background-color: black;*/
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 10px;
 }
-.nav-button:hover {
-    border: 1px solid white;
-}
+/*.nav-button:hover {*/
+/*    border: 1px solid white;*/
+/*}*/
 
 .menu {
     display: flex;
@@ -44,12 +44,16 @@ a {
     left: 0;
     height: 2rem;
     width: 8.4rem;
+    border-radius: 5%;
 }
 @media screen and (min-width: 590px) {
     /*457*/
     nav {
         height: 3rem;
         background-color: black;
+    }
+    .nav-button:hover {
+        border: 1px solid white;
     }
 }
 @media screen and (max-width: 590px) {
@@ -60,7 +64,16 @@ a {
 }
 @media screen and (max-width: 457px) {
     nav {
-        height: 9rem;
-        background-color: rgba(255, 255, 255, .5);
+        height: 6rem;
+        background-color: rgba(0, 0, 0, .7);
     }
+    .nav-button {
+        font-size: 0.5rem;
+        padding: 0.25rem 0.5rem;
+    }
+    .nav-button:hover {
+        border: 1px solid white;
+        background-color: black;
+    }
+
 }
