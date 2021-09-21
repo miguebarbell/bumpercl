@@ -150,3 +150,23 @@
     background-color: rgba(0, 0, 0, .5);
     z-index: 10;
 }
+.title-small-content{
+    padding: 2px 2rem;
+    font-size: 1.5rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.title-small-content::before {
+    left: -0.25rem;
+    content: '';
+    position: absolute;
+    background-color: red;
+    height: 105%;
+    z-index: -1;
+    width: 10rem;
+    border-radius: 3px;
+}
+.title-small-content:hover::before {
+    z-index: 0;
+}
