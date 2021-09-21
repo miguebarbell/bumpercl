@@ -1,1 +1,1 @@
-web: gunicorn bumpercl.wsgi --log-file -
+web: gunicorn djangoProject.wsgi --log-file -
