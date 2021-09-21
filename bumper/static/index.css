@@ -90,6 +90,9 @@
     height: 15vw;
     width: 15vw;
 }
+.small-content:hover {
+    color: white;
+}
 .content a{
     font-family: Arial Narrow, sans-serif;
     text-decoration: none;
@@ -156,6 +159,8 @@
     position: absolute;
     z-index: 1;
 }
+.title-small-content:hover {
+}
 
 .title-small-content::before {
     left: -0.25rem;
@@ -168,5 +173,6 @@
     border-radius: 3px;
 }
 .title-small-content:hover::before {
-    z-index: 0;
+    /*content: 'VER';*/
+    /*z-index: 0;*/
 }
