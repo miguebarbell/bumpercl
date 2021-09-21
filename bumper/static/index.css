@@ -143,3 +143,10 @@
     background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .1)), url('../static/images/concept2-rowerg-h_1_1.jpg') no-repeat bottom center;
     background-size: contain;
 }
+.freeze {
+    height: 100vh;
+    width: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10;
+}

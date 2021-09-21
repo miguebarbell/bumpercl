@@ -29,6 +29,7 @@ a {
     /*background-color: black;*/
     border: 1px solid black;
     border-radius: 10px;
+    transition: all .2s ease-in-out;
 }
 /*.nav-button:hover {*/
 /*    border: 1px solid white;*/
@@ -59,13 +60,13 @@ a {
 }
 @media screen and (max-width: 590px) {
     nav {
-        height: 3rem;
+        height: 6rem;
         background-color: black;
     }
 }
 @media screen and (max-width: 457px) {
     nav {
-        height: 3rem;
+        height: 4rem;
         background-color: rgba(0, 0, 0, .7);
     }
     .nav-button {
@@ -76,5 +77,18 @@ a {
         border: 1px solid white;
         background-color: black;
     }
-
+}
+@media screen and (max-width: 260px) {
+    nav {
+        height: 6rem;
+        background-color: rgba(0, 0, 0, .7);
+    }
+    .nav-button {
+        font-size: 0.4rem;
+        padding: 0.25rem 0.5rem;
+    }
+    .nav-button:hover {
+        border: 1px solid white;
+        background-color: black;
+    }
 }

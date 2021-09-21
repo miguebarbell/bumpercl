@@ -46,3 +46,11 @@ class ProductImage(models.Model):
 
     def __str__(self):
         return self.product.name
+
+
+class MessageForm(models.Model):
+    message = models.TextField(max_length=1000)
+    email = models.EmailField(max_length=255)
+    name = models.CharField(max_length=200, blank=True)
+    phone = models.IntegerField(max_length=12, blank=True)
+    date = models.DateTimeField(auto_now_add=True)

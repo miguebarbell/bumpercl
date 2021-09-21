@@ -13,5 +13,12 @@ function showNotice(title, notice) {
     })
 }
 const title = 'Noticia de último momento.'
-const notice = 'Llegaron trotadoras nuevas con un tremendo progrma que tiene la capacidad de preparar una maraton en tres meses.'
+const notice = 'Llegaron trotadoras nuevas con un tremendo programa que tiene la capacidad de preparar una maraton en tres meses.'
 showNotice(title, notice)
+
+function contactForm() {
+    const body = document.querySelector('body')
+    let divContactForm = document.createElement('div')
+    divContactForm.classList.add('freeze')
+
+}
