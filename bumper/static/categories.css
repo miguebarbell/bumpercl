@@ -1,4 +1,4 @@
-.bikes-container {
+.container {
     /*margin-top: 20vh;*/
     background-color: black;
     display: flex;
@@ -8,14 +8,14 @@
     align-items: center;
 }
 @media screen and (min-width: 590px) {
-    .bikes-container {
+    .container {
         padding: 5rem 2rem;
     }
 }
 @media screen and (max-width: 590px) {
 }
 @media screen and (max-width: 457px) {
-    .bikes-container {
+    .container {
         padding-top: 9rem;
     }
 }

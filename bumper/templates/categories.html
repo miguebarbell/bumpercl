@@ -11,15 +11,25 @@
 {% block script %}
 {% endblock %}
 {% block body %}
-    <div class="bikes-container">
+    <div class="container">
     {% for element, pictures in elements %}
         <div class="item-container">
             <div class="title-detail">{{ element.name }}</div>
             <div class="description-detail">{{ element.description }}</div>
             <div class="price-detail">${{ element.price }}</div>
-            {% for picture in pictures %}
-                <img class="image-detail" src="/media/{{ picture.image }}" alt="{{ picture.product.name }}">
-            {% endfor %}
+            <div class="carousel">
+            <button class="carousel-button--left"><</button>
+            <div class="carousel-track-container">
+            <ul class="carousel-track">
+                {% for picture in pictures %}
+                    <li class="carousel-slide">
+                    <img class="image-detail" src="/media/{{ picture.image }}" alt="{{ picture.product.name }}">
+                    </li>
+                {% endfor %}
+            </ul>
+            </div>
+                <button class="carousel-button--right">></button>
+            </div>
             <button class="button-detail">Comprar</button>
         </div>
     {% endfor %}

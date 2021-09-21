@@ -11,16 +11,23 @@
     border: 1px solid black;
     max-width: 80vw;
 }
+.carousel {
+    grid-area: picture;
+}
 .image-detail {
     display: block;
     align-items: center;
     justify-items: center;
-    grid-area: picture;
+    /*grid-area: picture;*/
     /*width: 20rem;*/
     /*width: 40vw;*/
-    width: 100%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+.image-detail--index {
+    grid-area: picture;
+    width: 40vw;
 }
 .price-detail {
     grid-area: price;
@@ -58,6 +65,33 @@
 .button-detail:hover {
     color: white;
     background-color: green;
+}
+.carousel {
+    display:block;
+}
+li.carousel-slide {
+    list-style: none;
+}
+.carousel-track-container {
+    /*position: relative;*/
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.carousel-track {
+    /*position: relative;*/
+    margin: 0;
+    padding: 0;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    /*background: transparent;*/
+    background-color: transparent;
+}
+.carousel-button--left {
+    content: '<';
+    left: -50px;
 }
 @media screen and (min-width: 590px) {
     .item-container {
