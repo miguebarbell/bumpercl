@@ -12,7 +12,7 @@ class User(AbstractUser):
 class Product(models.Model):
     # name, price, description, date, available,
     name = models.CharField(max_length=100, unique=True)
-    description = models.TextField(max_length=1000)
+    description = models.TextField(max_length=3000)
     stock = models.IntegerField()
     price = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
