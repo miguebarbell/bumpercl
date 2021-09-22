@@ -146,3 +146,4 @@ django_heroku.settings(locals())
 # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 WHITENOISE_USE_FINDERS = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+GRAPPELLI_ADMIN_TITLE = 'Bumper Chile'

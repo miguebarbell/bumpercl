@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/static/categories.css">
 {% endblock %}
 {% block script %}
+    <script src="/static/item.js"></script>
 {% endblock %}
 {% block body %}
     <div class="container">
@@ -18,17 +19,17 @@
             <div class="description-detail">{{ element.description }}</div>
             <div class="price-detail">${{ element.price }}</div>
             <div class="carousel">
-            <button class="carousel-button--left"><</button>
             <div class="carousel-track-container">
             <ul class="carousel-track">
                 {% for picture in pictures %}
                     <li class="carousel-slide">
+                    <div id="prev-btn" class="prev-click-div" onclick="prevImage()"></div>
                     <img class="image-detail" src="/media/{{ picture.image }}" alt="{{ picture.product.name }}">
+                    <div id="next-btn" class="next-click-div" onclick="nextImage()"></div>
                     </li>
                 {% endfor %}
             </ul>
             </div>
-                <button class="carousel-button--right">></button>
             </div>
             <button class="button-detail">Comprar</button>
         </div>

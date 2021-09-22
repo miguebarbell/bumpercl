@@ -15,13 +15,14 @@
     grid-area: picture;
 }
 .image-detail {
-    display: block;
+    /*display: block;*/
     align-items: center;
     justify-items: center;
     /*grid-area: picture;*/
     /*width: 20rem;*/
     /*width: 40vw;*/
     width: 90%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -67,31 +68,85 @@
     background-color: green;
 }
 .carousel {
-    display:block;
+    /*display:block;*/
 }
 li.carousel-slide {
     list-style: none;
 }
 .carousel-track-container {
-    /*position: relative;*/
-    background-color: rgba(0, 0, 0, 0.5)
+    position: relative;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    height: 100%;
 }
 .carousel-track {
     /*position: relative;*/
     margin: 0;
     padding: 0;
 }
-.carousel-button {
+/*.carousel-button {*/
+/*    position: relative;*/
+/*    transform: translateY(-50%);*/
+/*    border: 0;*/
+/*    background-color: transparent;*/
+/*    color: red;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.left {*/
+/*    top: 50%;*/
+    /*left: -1rem;*/
+/*}*/
+/*.right {*/
+/*    top: -50%;*/
+/*    right: 1rem;*/
+/*}*/
+.carousel-slide {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 0;
-    /*background: transparent;*/
-    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
-.carousel-button--left {
+li > img.image-detail {
+    max-height: 100%;
+    object-fit: cover;
+}
+.prev-click-div {
+    /*background-color: rgba(255, 0, 0, .3);*/
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 10;
+}
+.prev-click-div:hover::before {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 2rem;
     content: '<';
-    left: -50px;
+}
+.next-click-div {
+    /*background-color: rgba(0, 0, 255, .3);*/
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    z-index: 10;
+}
+.next-click-div:hover::before {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 2rem;
+    content: '>';
 }
 @media screen and (min-width: 590px) {
     .item-container {

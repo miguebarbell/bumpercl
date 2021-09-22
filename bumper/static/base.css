@@ -19,6 +19,7 @@ nav {
     text-transform: uppercase;
     flex-wrap: wrap;
     position: fixed;
+    z-index: 99;
 }
 a {
     text-decoration: none;
