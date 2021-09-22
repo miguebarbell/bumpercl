@@ -4,9 +4,9 @@ function checkNotices() {
     } else {
         console.log('Notice')
         const noticeContainer = document.getElementById('notice-container')
-        const closeButton = document.querySelector('.notice-close')
+        // const closeButton = document.querySelector('.notice-close')
         noticeContainer.style.display = 'flex'
-        closeButton.addEventListener('click', () => {
+        noticeContainer.addEventListener('click', () => {
             noticeContainer.style.display = 'none'
         })
     }

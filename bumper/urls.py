@@ -4,6 +4,8 @@ from django.conf import settings
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='indexbumper'),
-    path('categoria/<str:category>', views.categories, name='categoriesbumper'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('', views.index, name='indexbumper'),
+                  path('categoria/<str:category>', views.categories, name='categoriesbumper'),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# handler404 = 'views.error_404'

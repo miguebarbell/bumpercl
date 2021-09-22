@@ -24,3 +24,4 @@ def categories(request, category):
     elements = zip(items, pictures)
     return render(request, 'categories.html', {'elements': elements, 'category': category})
 
+

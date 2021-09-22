@@ -33,6 +33,7 @@ SECRET_KEY = env('SECRET_KEY')
 # DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 DEBUG = (env('DEBUG_VALUE') == 'True')
 
+
 ALLOWED_HOSTS = ['.herokuapp.com']
 
 
