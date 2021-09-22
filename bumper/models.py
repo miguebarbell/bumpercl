@@ -52,5 +52,15 @@ class MessageForm(models.Model):
     message = models.TextField(max_length=1000)
     email = models.EmailField(max_length=255)
     name = models.CharField(max_length=200, blank=True)
-    phone = models.IntegerField(max_length=12, blank=True)
+    phone = models.IntegerField(blank=True)
     date = models.DateTimeField(auto_now_add=True)
+
+
+class Notice(models.Model):
+    title_notice = models.CharField(max_length=100)
+    message_notice = models.TextField(max_length=1000)
+    date_notice = models.DateTimeField(auto_now_add=True)
+    active_notice = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.title_notice
