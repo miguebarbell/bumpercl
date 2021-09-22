@@ -3,7 +3,6 @@ console.log('loaded script for carousel.')
 const track = document.querySelector('.carousel-track')
 const slides = Array.from(track.children)
 const nextButton = document.getElementById('next-btn')
-console.log(nextButton)
 const prevButton = document.getElementById('prev-btn')
 
 for (let i = 0; i < slides.length; i++) {
