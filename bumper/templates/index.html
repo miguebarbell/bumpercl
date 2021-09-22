@@ -13,8 +13,8 @@ Inicio
 
     <div id="notice-container">
     <div class="inner-notice-container">
-        <h2 id="notice-title"></h2>
-        <p id="notice-content"></p>
+        <h2 id="notice-title">{{ last_notice.title_notice }}</h2>
+        <p id="notice-content">{{ last_notice.message_notice }}</p>
     <button type="button" class="notice-close">Cerrar</button>
     </div>
     </div>
@@ -43,5 +43,6 @@ Inicio
             <div class="small-content small-content-barbell"><span class="title-small-content">Barbells</span></div></a>
     </div>
     <div class="content contact">Contact</div>
+
     <script src="../static/main.js"></script>
 {% endblock %}
