@@ -1,44 +1,47 @@
 // carousel functionality.
 console.log('loaded script for carousel.')
-const track = document.querySelector('.carousel-track')
-const slides = Array.from(track.children)
+const images = document.querySelectorAll('.image-detail')
+for (let i = 0; i < images.length; i++) {
+    images[i].style.display = 'none'
+    images[i].id = i
+}
 const nextButton = document.getElementById('next-btn')
 const prevButton = document.getElementById('prev-btn')
 
-for (let i = 0; i < slides.length; i++) {
-    slides[i].id = i;
-
-}
-let currentImageId = slides.length - 1
+let currentImageId = 0
+images[currentImageId].style.display = 'flex'
 nextButton.addEventListener('click', nextImage)
 prevButton.addEventListener('click', prevImage)
 function nextImage() {
-    if (slides.length === 1) {
+    if (images.length === 1) {
         return
     }
-    if (currentImageId == `${slides.length - 1}`) {
-        // console.log('going to the first element.')
+    if (currentImageId == `${images.length - 1}`) {
         document.getElementById(`${currentImageId}`).style.display = 'none'
         currentImageId = 0
         document.getElementById(currentImageId).style.display = 'flex'
+        // console.log(`current image: ${currentImageId}`)
     } else {
-        document.getElementById(`${currentImageId + 1}`).style.display = 'flex';
         document.getElementById(`${currentImageId}`).style.display = 'none';
+        currentImageId += 1
+        document.getElementById(`${currentImageId}`).style.display = 'flex';
+        // console.log(`current image: ${currentImageId}`)
     }
-    // console.log('next image')
 }
 function prevImage() {
-    if (slides.length === 1) {
+    if (images.length === 1) {
         return
     }
     if (currentImageId === 0) {
-        // console.log('going to the last element.')
-        currentImageId = slides.length - 1;
-        document.getElementById(`${currentImageId}`).style.display = 'flex';
+        // console.log('first item')
         document.getElementById('0').style.display = 'none'
+        currentImageId = images.length - 1;
+        document.getElementById(`${currentImageId}`).style.display = 'flex';
+        // console.log(`current image: ${currentImageId}`)
     } else {
-        document.getElementById(`${currentImageId-1}`).style.display = 'flex';
         document.getElementById(`${currentImageId}`).style.display = 'none';
+        currentImageId -= 1
+        document.getElementById(`${currentImageId}`).style.display = 'flex';
+        // console.log(`current image: ${currentImageId}`)
     }
-    // console.log('prev image')
 }

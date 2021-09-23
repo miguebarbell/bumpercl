@@ -78,6 +78,9 @@
     font-size: 2rem;
     text-align: center;
 }
+#notice-content {
+    margin-top: 1rem;
+}
 #notice-content::before {
     content: '';
     width: 50%;
@@ -85,7 +88,7 @@
     position: absolute;
     min-width: 10vw;
     max-width: 50vw;
-    background-color: black;
+    background-color: red;
 }
 .inner-notice-container {
     /*background: white;*/

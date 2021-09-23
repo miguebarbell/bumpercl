@@ -118,7 +118,7 @@ li > img.image-detail {
     height: 100%;
     width: 50%;
     left: 0;
-    z-index: 10;
+    z-index: 11;
 }
 .prev-click-div:hover::before {
     display: flex;
@@ -129,6 +129,7 @@ li > img.image-detail {
     font-weight: bold;
     font-size: 2rem;
     content: '<';
+    z-index:11;
 }
 .next-click-div {
     /*background-color: rgba(0, 0, 255, .3);*/
@@ -136,7 +137,7 @@ li > img.image-detail {
     height: 100%;
     width: 50%;
     right: 0;
-    z-index: 10;
+    z-index: 11;
 }
 .next-click-div:hover::before {
     display: flex;
@@ -147,6 +148,7 @@ li > img.image-detail {
     font-weight: bold;
     font-size: 2rem;
     content: '>';
+    z-index: 11;
 }
 @media screen and (min-width: 590px) {
     .item-container {

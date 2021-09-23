@@ -21,13 +21,13 @@
             <div class="carousel">
             <div class="carousel-track-container">
             <ul class="carousel-track">
+                <div id="prev-btn" class="prev-click-div" onclick="prevImage()"></div>
                 {% for picture in pictures %}
                     <li class="carousel-slide">
-                    <div id="prev-btn" class="prev-click-div" onclick="prevImage()"></div>
                     <img class="image-detail" src="/media/{{ picture.image }}" alt="{{ picture.product.name }}">
-                    <div id="next-btn" class="next-click-div" onclick="nextImage()"></div>
                     </li>
                 {% endfor %}
+                <div id="next-btn" class="next-click-div" onclick="nextImage()"></div>
             </ul>
             </div>
             </div>
