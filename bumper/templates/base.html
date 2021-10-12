@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %} - Bumper Chile</title>
     <link rel="stylesheet" type="text/css" href="/static/base.css">
+https://fonts.gstatic.com/s/googlesans/v36/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2
+
 {%  block styles %}
 {% endblock %}
 </head>
@@ -16,11 +18,15 @@
      <a href="/categoria/ROWER"><div class="nav-button">Rowers</div></a>
      <a href="/categoria/TREADMILL"><div class="nav-button">Treadmill</div></a>
     </div>
-    <div class="cart nav-button">CART</div>
+    <div class="cart nav-button" onclick="deployCart()">CART</div>
 </nav>
 {% block body %}
 {% endblock %}
 {% block script %}
 {% endblock %}
+<footer>
+    © 2021, BumperCl LLC. Nashua, New Hampshire, USA 03061
+</footer>
+<script src="/static/nav.js"></script>
 </body>
 </html>
