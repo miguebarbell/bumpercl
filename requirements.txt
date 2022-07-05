@@ -1,7 +1,7 @@
 asgiref==3.4.1
 BareNecessities==0.2.8
 dj-database-url==0.5.0
-Django==3.2.7
+Django==3.2.14
 django-admin-honeypot==1.1.0
 django-cors-headers==3.8.0
 django-environ==0.7.0
